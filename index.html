@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prisendringskalkulator</title>
+        <link rel="stylesheet" href="Styling/endring.css" />
+        <script src="JavaScript/endring.js" async></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Prisendringskalkulator</h1>
+            <h2>Finn prosentvis endring:</h2>
+
+            <div class="container1">
+                <div class="inner-container1">
+                    <label for="userInput1"><h3>Ny verdi</h3></label>
+                    <input
+                        type="number"
+                        inputmode="tel"
+                        id="userInput1"
+                        name="userInput1"
+                        placeholder="0"
+                        oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="12"
+                        required
+                    />
+                </div>
+                <div class="inner-container2">
+                    <label for="userInput2"><h3>Opprinnelig verdi</h3></label>
+                    <input
+                        type="number"
+                        inputmode="tel"
+                        id="userInput2"
+                        name="userInput2"
+                        placeholder="0"
+                        oninput="javascript: if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                        maxlength="12"
+                        required
+                    /><br />
+                    <button class="btn-calculate" id="btn">Kalkuler</button>
+                </div>
+            </div>
+            <p class="output" id="tall1"></p>
+        </div>
+        <script></script>
+    </body>
+</html>

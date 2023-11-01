@@ -1,0 +1,124 @@
+body {
+    text-align: center;
+    background-color: rgb(248, 254, 251);
+    font-family: sans-serif;
+}
+
+/* Removig/hiding arrows/spiners in number input fields */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Making the design responsive for larger devicer */
+@media only screen and (min-width: 1200px) {
+    #userInput1,
+    #userInput2 {
+        width: 40% !important;
+    }
+    .container1 {
+        margin-top: 5% !important; /* Shorter margin between "Ny verdi" and the headings*/
+    }
+    #btn {
+        height: 45px !important; /*Taller button */
+        margin-top: 15px; /* Making between number field and button a little bigger */
+    }
+}
+
+/* Making the design responsive for mobile devices */
+@media only screen and (max-width: 460px) {
+    .container {
+        font-size: 75%; /* Making the font smaller for smaller devices */
+    }
+}
+
+/* The biggest container on the page, making sure to keep margin and padding for a nicer look */
+.container {
+    margin: auto;
+    padding: 5px;
+    /* border: 1px solid red; */
+}
+
+/* Container containing both inner-container1 and inner-container2 */
+.container1 {
+    margin: 5px;
+    margin-top: 15%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/* Styling all elements related to "Ny verdi" */
+.inner-container1 {
+    margin: 5%;
+    text-align: center;
+    /* border: 1px solid blue; */
+    font-size: 115%;
+}
+
+/* Styling all elements related to "Opprinnelig verdi" */
+.inner-container2 {
+    margin: 5%;
+    text-align: center;
+    /* border: 1px solid blue; */
+    font-size: 115%;
+}
+
+/* Styling for the "Kalkuler" button */
+button {
+    border: 1px solid black;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    width: auto;
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Making the input fields higher and wider that standard */
+#userInput1,
+#userInput2 {
+    height: 30px;
+    width: 50%;
+    border-radius: 5px;
+}
+
+/* Styling button with id = btn */
+.btn-calculate {
+    background-color: rgb(0, 85, 255);
+    height: 35px;
+    box-shadow: 1px 1px 1px black;
+    transition: 0.17s ease-in;
+}
+
+.btn-calculate:hover {
+    background-color: rgb(0, 130, 255);
+}
+
+.btn-calculate:active {
+    background-color: rgb(0, 90, 255);
+    box-shadow: none;
+    transition: 0ms;
+}
+
+/* Styling for the output (answer) */
+.output {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 2px;
+    font-size: 150%;
+    font-weight: bold;
+    border: 1px solid grey;
+    border-radius: 10px;
+    visibility: hidden; /* Making the output hidden before it is changed in JS function */
+}
